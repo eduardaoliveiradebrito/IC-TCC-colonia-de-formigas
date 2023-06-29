@@ -10,10 +10,10 @@ A avaliação da qualidade dos resultados foi realizada utilizando algoritmos de
 # Estrutura
 
 Este projeto adota a seguinte estrutura:
- - colonia
+- colonia
   - ACO
   - Parallel ACO
- - machine_learning
+- machine_learning
   - RandomForest
   - SVM
   - Tree
