@@ -16,7 +16,6 @@ Este projeto adota a seguinte estrutura:
 - machine_learning
   - RandomForest
   - SVM
-  - Tree
   - Decision Tree
 - graphics
   - Line Graphics
