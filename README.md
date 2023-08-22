@@ -10,13 +10,14 @@ A avaliação da qualidade dos resultados foi realizada utilizando algoritmos de
 # Estrutura
 
 Este projeto adota a seguinte estrutura:
-- colonia
-  - ACO
-  - Parallel ACO
+- ant colony
+  - Ant Colony
+  - Parallel Ant Colony
 - machine_learning
-  - RandomForest
-  - SVM
   - Decision Tree
+  - MachineLearningUtil
+  - Random Forest
+  - SVM
 - graphics
   - Line Graphics
   - Bar Graphs
