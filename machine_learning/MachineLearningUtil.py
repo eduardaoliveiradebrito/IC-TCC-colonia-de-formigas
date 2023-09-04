@@ -122,7 +122,7 @@ class MLUtil:
         ['Recall', np.round(recall_class, 2)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_class_banana_' + self.name + '.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Metricas/metricas_class_banana_' + self.name + '.csv')
 
 
     # Generate CSV with metrics
@@ -133,4 +133,4 @@ class MLUtil:
         ['Desvio Padrao', round(results['test_accuracy'].std(), 4), round(results['test_f1_macro'].std(), 4), round(results['test_precision_macro'].std(), 4), round(results['test_recall_macro'].std(), 4)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_global_banana_' + self.name + '.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Metricas/metricas_global_banana_' + self.name + '.csv')
