@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import warnings
@@ -115,21 +116,21 @@ class MLUtil:
 
     # Generate CSV with metrics - By class
     dataCSV = [
-        ['Acurácia', accuracy],
-        ['F-Measure', f1_class],
-        ['Precisão', precision_class],
-        ['Recall', recall_class]
+        ['Acurácia', round(accuracy, 2)],
+        ['F-Measure', np.round(f1_class, 2)],
+        ['Precisão', np.round(precision_class, 2)],
+        ['Recall', np.round(recall_class, 2)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_class_banana.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_class_banana_' + self.name + '.csv')
 
 
     # Generate CSV with metrics
     dataCSV = [
         ['', 'Acuracia', 'F-Measure', 'Precisao', 'Recall'],
-        ['Agregado', accuracy, f1_aggregate, precision_aggregate, recall_aggregate],
-        ['Media', results['test_accuracy'].mean(), results['test_f1_macro'].mean(), results['test_precision_macro'].mean(), results['test_recall_macro'].mean()],
-        ['Desvio Padrao', results['test_accuracy'].std(), results['test_f1_macro'].std(), results['test_precision_macro'].std(), results['test_recall_macro'].std()]
+        ['Agregado', round(accuracy, 2), round(f1_aggregate, 2), round(precision_aggregate, 2), round(recall_aggregate, 2)],
+        ['Media', round(results['test_accuracy'].mean(), 4), round(results['test_f1_macro'].mean(), 4), round(results['test_precision_macro'].mean(), 4), round(results['test_recall_macro'].mean(), 4)],
+        ['Desvio Padrao', round(results['test_accuracy'].std(), 4), round(results['test_f1_macro'].std(), 4), round(results['test_precision_macro'].std(), 4), round(results['test_recall_macro'].std(), 4)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_banana.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/metricas_global_banana_' + self.name + '.csv')

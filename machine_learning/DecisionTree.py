@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split, cross_validate
 from MachineLearningUtil import MLUtil
 
 
-ml = MLUtil("DecisionTreeClassifier")
+ml = MLUtil("decision_tree")
 print('\nML:', ml.name)
 
 ml.define_data_for_machine_learning()

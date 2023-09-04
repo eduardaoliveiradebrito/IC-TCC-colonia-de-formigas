@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split, cross_validate
 from MachineLearningUtil import MLUtil
 
 
-ml = MLUtil("SVM")
+ml = MLUtil("svm")
 print('\nML:', ml.name)
 
 ml.define_data_for_machine_learning_SVM()
