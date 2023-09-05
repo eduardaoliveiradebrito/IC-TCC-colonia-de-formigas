@@ -12,7 +12,7 @@ class MLUtil:
 
 
   def define_data_for_machine_learning (self):
-    data = pd.read_csv('C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/banana.csv', sep=',')
+    data = pd.read_csv('C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/banana_Reduzido_paralelo.csv', sep=',')
     variables = ['At1','At2']
 
     self.x = data[variables]
@@ -34,7 +34,7 @@ class MLUtil:
 
 
   def define_data_for_machine_learning_SVM (self):
-    data = pd.read_csv('C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/banana.csv', sep=',')
+    data = pd.read_csv('C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/banana_Reduzido_paralelo.csv', sep=',')
 
     # Separating features and classes
     self.x = data.drop('Class', axis=1)
@@ -122,7 +122,7 @@ class MLUtil:
         ['Recall', np.round(recall_class, 2)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Metricas/metricas_class_banana_' + self.name + '.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/Metricas/metricas_class_' + self.name + '_banana_Reduzido_paralelo.csv')
 
 
     # Generate CSV with metrics
@@ -133,4 +133,4 @@ class MLUtil:
         ['Desvio Padrao', round(results['test_accuracy'].std(), 4), round(results['test_f1_macro'].std(), 4), round(results['test_precision_macro'].std(), 4), round(results['test_recall_macro'].std(), 4)]
     ]
 
-    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Metricas/metricas_global_banana_' + self.name + '.csv')
+    self.create_csv (dataCSV, 'C:/Users/maria.oliveira/Documents/workspace/projetos/IC-TCC-colonia-de-formigas/bases/Banana/Metricas/metricas_global_' + self.name + '_banana_Reduzido_paralelo.csv')
